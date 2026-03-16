@@ -5,6 +5,18 @@ Fixed::Fixed() : fixedPointValue_(0)
 	std::cout << "Default constructor called" << std::endl;
 }
 
+Fixed::Fixed(int const integer)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->fixedPointValue = integer;
+	this->fixedPointValue << this->fractionnal_;
+}
+
+Fixed::Fixed(float const floatPoint);
+{
+	std::cout << "Float constructor called" << std::endl;
+}
+
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
