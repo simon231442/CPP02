@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                         ::::::::           */
+/*   Fixed.cpp                                           :+:    :+:           */
+/*                                                      +:+                   */
+/*   By: srenaud <marvin@42.fr>                        +#+                    */
+/*                                                    +#+                     */
+/*   Created: 2026/03/16 17:56:56 by srenaud        #+#    #+#                */
+/*   Updated: 2026/03/16 17:57:10 by srenaud        ########   odam.nl        */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed() : fixedPointValue_(0)
@@ -15,6 +27,7 @@ Fixed::Fixed(int const integer)
 Fixed::Fixed(float const floatPoint);
 {
 	std::cout << "Float constructor called" << std::endl;
+	this->fixedPointValue =	roundf(floatPoint * 2 ^ this->fractionnal_);
 }
 
 Fixed::~Fixed()
@@ -31,7 +44,10 @@ Fixed::Fixed(const Fixed& source)
 Fixed	&Fixed::operator=(const Fixed& source)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	this->fixedPointValue_ = source.getRawBits();
+	if (this != &source)
+	{
+		this->fixedPointValue_ = source.getRawBits();
+	}
 
 	return *this;
 }
