@@ -17,9 +17,11 @@ class Fixed{
 		~Fixed();
 		int					getRawBits(void) const; 	// const --> Read-only: returns the raw value without modifying the object
 		void				setRawBits(int const raw);	// const --> parameter 'raw' is read-only
-		float				toFloat(void);
-		int					toInt(void);	
+		float				toFloat(void) const;
+		int					toInt(void) const;
 		};
+
+std::ostream&	operator<<(std::ostream& o, Fixed const& i);
 
 #endif
 
@@ -28,3 +30,4 @@ class Fixed{
 /  fixed(float const floatPoint): constructeur prennant un nb a virgule floatante en parametre et le converti en fixed point
 /  float	toFloat(void) 		: fonction membre qui converti le fixed point en float et le renvoie
 /  int		toInt() 			: fonction membre qui converti le fixed point en int et le renvoie
+*/

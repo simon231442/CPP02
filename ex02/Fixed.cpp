@@ -6,7 +6,7 @@
 /*   By: srenaud <marvin@42.fr>                        +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/16 17:56:56 by srenaud        #+#    #+#                */
-/*   Updated: 2026/03/17 10:42:45 by srenaud        ########   odam.nl        */
+/*   Updated: 2026/03/17 14:03:49 by srenaud        ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,11 @@ float	Fixed::toFloat(void) const
 int		Fixed::toInt(void) const
 {
 	return roundf(this->toFloat());
+}
+
+bool	Fixed::operator>(Fixed const& b)
+{
+	if (
 }
 
 std::ostream&	operator<<(std::ostream& o, Fixed const& i)
