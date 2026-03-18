@@ -1,4 +1,4 @@
-NAME = UsefullFixedPoint
+NAME = OverloadedFixedPoint
 
 ################################################################################
 #                               DIRECTORIES                                    #
@@ -10,7 +10,7 @@ OBJ_DIR = obj
 #                                SOURCE FILES                                  #
 ################################################################################
 
-SOURCE = main.cpp Fixed.cpp
+SOURCE = main.cpp Fixed.cpp Fixed_operator.cpp Fixed_operator.cpp
 
 ################################################################################
 #                             COMPILER OPTIONS                                 #

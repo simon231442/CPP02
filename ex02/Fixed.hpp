@@ -20,23 +20,27 @@ class Fixed{
 		float				toFloat(void) const;
 		int					toInt(void) const;
 
-		bool				operator>(Fixed const& b);
-		bool				operator<(Fixed const& b);
-		bool				operator>=(Fixed const& b);
-		bool				operator<=(Fixed const& b);
-		bool				operator==(Fixed const& b);
-		bool				operator!=(Fixed const& b);
+		bool				operator>(Fixed const& b) const;
+		bool				operator<(Fixed const& b) const;
+		bool				operator>=(Fixed const& b) const;
+		bool				operator<=(Fixed const& b) const;
+		bool				operator==(Fixed const& b) const;
+		bool				operator!=(Fixed const& b) const;
 
-		bool				operator+(Fixed const& b);
-		bool				operator-(Fixed const& b);
-		bool				operator*(Fixed const& b);
-		bool				operator/(Fixed const& b);
+		Fixed				operator+(Fixed const& b) const;
+		Fixed				operator-(Fixed const& b) const;
+		Fixed				operator*(Fixed const& b) const;
+		Fixed				operator/(Fixed const& b) const;
+		Fixed				operator++(void);
+		Fixed				operator++(int);
+		Fixed				operator--(void);
+		Fixed				operator--(int);
 
-		static Fixed		&minConstGet(Fixed& b, Fixed& c);
-		static Fixed const	&minConstGet(Fixed const& b, Fixed const& c);
+		static Fixed&		min(Fixed& a, Fixed& b);
+		static Fixed const&	min(Fixed const& a, Fixed const& b);
 
-		static Fixed		&maxConstGet(Fixed& b, Fixed& c);
-		static Fixed const	&maxConstGet(Fixed const& b, Fixed const& c);
+		static Fixed&		max(Fixed& a, Fixed& b);
+		static Fixed const&	max(Fixed const& a, Fixed const& b);
 		};
 
 std::ostream&	operator<<(std::ostream& o, Fixed const& i);
