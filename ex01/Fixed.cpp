@@ -6,7 +6,7 @@
 /*   By: srenaud <marvin@42.fr>                        +#+                    */
 /*                                                    +#+                     */
 /*   Created: 2026/03/16 17:56:56 by srenaud        #+#    #+#                */
-/*   Updated: 2026/03/17 10:42:45 by srenaud        ########   odam.nl        */
+/*   Updated: 2026/03/18 12:49:51 by srenaud        ########   odam.nl        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ float	Fixed::toFloat(void) const
 
 int		Fixed::toInt(void) const
 {
-	return roundf(this->toFloat());
+	return(this->fixedPointValue_ >> this->fractionnalBits_);
 }
 
 std::ostream&	operator<<(std::ostream& o, Fixed const& i)

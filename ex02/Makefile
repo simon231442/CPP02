@@ -10,14 +10,14 @@ OBJ_DIR = obj
 #                                SOURCE FILES                                  #
 ################################################################################
 
-SOURCE = main.cpp Fixed.cpp Fixed_operator.cpp Fixed_operator.cpp
+SOURCE = main.cpp Fixed.cpp Fixed_operator.cpp Fixed_minmax.cpp
 
 ################################################################################
 #                             COMPILER OPTIONS                                 #
 ################################################################################
 
 CCPP = c++
-	CPPFLAGS = -Wall -Wextra -Werror -I -std=c++98 
+	CPPFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 OBJETS = $(SOURCE:%.cpp=$(OBJ_DIR)/%.o)
 

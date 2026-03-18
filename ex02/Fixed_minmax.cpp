@@ -1,3 +1,5 @@
+#include "Fixed.hpp"
+
 Fixed&	Fixed::min(Fixed& a, Fixed& b)
 {
 	if (a < b)
